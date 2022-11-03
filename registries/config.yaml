@@ -1,0 +1,5 @@
+url: https://api.openshift.com/api/serviceregistry_mgmt/v1/
+credentials:
+  username: service-account-gitops
+  password: ${SA_PASSWORD}
+  

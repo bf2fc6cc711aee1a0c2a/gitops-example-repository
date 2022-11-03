@@ -1,0 +1,10 @@
+group: default
+id: locations-api
+name: Locations API
+description: An API used to manage a collection of locations.
+owner: dprince
+versions:
+  - $ref: 1.0.yaml
+rules:
+  validity: SYNTAX
+  compatibility: NONE

@@ -1,0 +1,8 @@
+version: 1.0
+status: ENABLED
+globalId: 6000
+properties:
+  - name: openapi-version
+    value: 3.0.3
+content:
+  $ref: ./1.0.content.yaml

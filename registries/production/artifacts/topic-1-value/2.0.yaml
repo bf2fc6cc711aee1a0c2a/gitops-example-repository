@@ -1,0 +1,5 @@
+version: 2.0
+status: ENABLED
+globalId: 6001
+content:
+  $ref: ../content/Address/v2.yaml

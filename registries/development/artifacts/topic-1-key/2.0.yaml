@@ -1,0 +1,15 @@
+version: 2.0
+status: ENABLED
+globalId: 5002
+labels:
+  - one
+  - two
+  - three
+  - four
+properties:
+  - name: key-1
+    value: value-1
+  - name: key-2
+    value: value-2
+content:
+  $ref: ../content/FullName/v2.yaml

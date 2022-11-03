@@ -1,0 +1,14 @@
+version: 1.1
+status: ENABLED
+globalId: 5001
+labels:
+  - foo
+  - bar
+  - bam
+properties:
+  - name: property-1
+    value: value-for-property-1
+  - name: property-3
+    value: value-for-property-3
+content:
+  $ref: ../content/FullName/v1.yaml

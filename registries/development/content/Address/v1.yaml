@@ -1,0 +1,4 @@
+contentId: 300
+contentHash: 422a24b1fb5ab766e638124858cb950bdcab499d36a6c793f706999e85da5d95
+content:
+  $ref: ./v1.avsc

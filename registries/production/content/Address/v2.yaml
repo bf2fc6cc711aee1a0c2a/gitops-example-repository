@@ -1,0 +1,4 @@
+contentId: 301
+contentHash: 705d907e58c0800f515581ee2325b972218eea1bee745e5263ec9e032155a1bc
+content:
+  $ref: ./v2.avsc

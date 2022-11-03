@@ -1,0 +1,12 @@
+group: default
+id: topic-1-key
+name: Topic 1 Key Schema (FullName)
+description: The schema associated with the "topic-1" Kafka topic.
+owner: bwayne
+versions:
+  - $ref: 1.0.yaml
+  - $ref: 1.1.yaml
+  - $ref: 2.0.yaml
+rules:
+  validity: SYNTAX
+  compatibility: FULL

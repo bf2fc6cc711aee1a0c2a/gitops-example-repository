@@ -1,0 +1,8 @@
+group: default
+id: topic-1-value
+name: Topic 1 Value Schema (Address)
+description: The schema associated with the "topic-1" Kafka topic (value schema).
+owner: bwayne
+versions:
+  - $ref: 1.0.yaml
+  - $ref: 2.0.yaml

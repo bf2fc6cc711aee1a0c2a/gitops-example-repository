@@ -1,0 +1,4 @@
+contentId: 200
+contentHash: 457c658dba5c459abcf256f0cf1eee161f4d03509bb73f7b12253a19b33226d0
+content:
+  $ref: ./1.0.content.json
