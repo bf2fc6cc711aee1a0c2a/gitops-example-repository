@@ -1,0 +1,18 @@
+$schema: red-hat/service-registry/artifact-v1.yaml
+instance: production
+id: locations-key
+group:
+  $ref: ./my-group.group.yaml
+versions:
+  - id: 1.0
+    content:
+      file: ../content-any-custom-structure/name-v1.0.avsc # <- Free-form path to the content
+      contentHash: da638b1bd8fc73d52e8f64879775b5f65d59bdc6c0be127c5a831734a68a2a46
+      # ^ This can be optional
+      # How to handle canonical content and hashing?
+      contentId: 3
+      globalId: 4
+rules:
+  - type: VALIDITY
+    enabled: true # <- Can be true by default, if listed
+    config: FULL

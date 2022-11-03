@@ -1,0 +1,3 @@
+$schema: red-hat/service-registry/group-v1.yaml
+instance: production
+id: my-group

@@ -1,0 +1,52 @@
+$schema: red-hat/service-registry/service-v1.yaml
+# See also https://github.com/redhat-developer/terraform-provider-rhoas
+#       -> https://registry.terraform.io/providers/pmuir/rhoas/latest/docs
+service:
+  # Separate resource file?
+  url: https://api.openshift.com/api/serviceregistry_mgmt/v1/
+  credentials:
+    # Must be organization admin to be able to provision instances
+    type: service-account # <- Is the type needed?
+    principal: srvc-acct-f1ace377-88f1-425b-9c88-f7ed823c286c
+    secret: ${SA_GITOPS_PASSWORD} # TODO: How to manage secrets?
+
+instances:
+
+  # This will make sure there is an instance named "development". TODO: Unique naming / identifiers
+  - id: development
+    access: # or "roles". "access" is used in the UI
+      - type: user
+        principal: jsenko
+        role: ADMIN # or "administrator" in the docs
+      - type: user
+        principal: hsimpson
+        role: DEVELOPER # or "manager" in the docs
+      - type: service-account
+        principal: srvc-acct-62c0b925-58d4-48d9-88f4-35abfc2c3af9
+        role: READ-ONLY # or "viewer" in the docs
+    rules: # Global rules
+      - type: COMPATIBILITY
+        enabled: true # <- Can be true by default, if listed
+        config: FULL
+    settings:
+      - name: registry.auth.basic-auth-client-credentials.enabled
+        value: true
+
+  - id: production
+    access:
+      - type: user
+        principal: jsenko
+        role: ADMIN
+      - type: user
+        principal: hsimpson
+        role: DEVELOPER
+      - type: service-account
+        principal: srvc-acct-62c0b925-58d4-48d9-88f4-35abfc2c3af9
+        role: READ-ONLY
+    rules:
+      - type: COMPATIBILITY
+        enabled: true
+        config: FULL
+    settings:
+      - name: registry.auth.basic-auth-client-credentials.enabled
+        value: true

@@ -1,0 +1,30 @@
+$schema: red-hat/service-registry/artifact-v1.yaml
+instance: development
+id: locations-value
+group:
+  $ref: ./my-group.group.yaml
+versions:
+  - id: 1.0
+    content:
+      file: ../content-any-custom-structure/address-1.avsc # <- Free-form path to the content
+      contentHash: 76efafe8b74237b2cd56bd0af9aa0ec76d6fb6cc3bfb8ce3c6efac4b36c4ca3f
+      # ^ This can be optional
+      # How to handle canonical content and hashing?
+      contentId: 1
+      globalId: 1
+  - id: 1.1
+    content:
+      file: ../content-any-custom-structure/address-v1.1.avsc
+      # contentHash: 39d7bd496c0d5dcdfcc2551d9057e97557382c2f026bdc973bbdbd6cd54a1caa
+      contentId: 2
+      globalId: 2
+  - id: v1.1
+    content:
+      file: ../content-any-custom-structure/address-v1.1.avsc
+      # contentHash: 39d7bd496c0d5dcdfcc2551d9057e97557382c2f026bdc973bbdbd6cd54a1caa
+      contentId: 2 # <- Same content ID
+      globalId: 3
+rules:
+  - type: VALIDITY
+    enabled: true # <- Can be true by default, if listed
+    config: FULL
