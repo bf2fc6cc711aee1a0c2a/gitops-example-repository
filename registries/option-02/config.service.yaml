@@ -14,6 +14,7 @@ instances:
 
   # This will make sure there is an instance named "development". TODO: Unique naming / identifiers
   - id: development
+    lock: 03d5772a-6291-43b3-bfaa-c937db6c0f65 # Provide a specific instance ID (after provisioning) to avoid affecting other instances (or creating a new instance) accidentally?
     access: # or "roles". "access" is used in the UI
       - type: user
         principal: jsenko
@@ -33,6 +34,7 @@ instances:
         value: true
 
   - id: production
+    lock: 4d0de24f-79d7-4259-921a-03cefc1629cd
     access:
       - type: user
         principal: jsenko
