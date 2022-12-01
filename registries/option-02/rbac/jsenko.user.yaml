@@ -1,0 +1,17 @@
+$schema: red-hat/rbac/user-v1.yaml
+id: jsenko
+name: Jakub Senko
+
+labels:
+  service: rhosr
+
+description: ""
+
+roles:
+  - $ref: ./development-developer.permission.yaml
+  - $ref: ./production-developer.permission.yaml
+
+public_gpg_key: |
+  mQINBGFR/vMBEADI5V3OHKD4tu4V7oxFRWc8Xw/TCz7Z2TZyK2Z2dtygApZjkX6cerfhnP/DsuMk
+  CQbVTRtG6htclPYtogZz6xdfBYsbnM1PAWIKztasPW02WLomunjUVgdni4GuZW1qCEKagk5l6bqX
+  ...

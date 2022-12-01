@@ -1,0 +1,13 @@
+$schema: red-hat/rbac/permission-v1.yml
+id: org-admin
+
+labels:
+  service: rhosr
+
+description: ""
+
+permissions:
+  - $schema: red-hat/rbac/rhosr/permission-config-v1.yml
+    data:
+      org_id: 123456
+      role: admin

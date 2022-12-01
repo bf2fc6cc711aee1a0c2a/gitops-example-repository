@@ -1,0 +1,10 @@
+$schema: red-hat/rbac/role-v1.yml
+id: org-admin
+
+labels:
+  service: rhosr
+
+description: ""
+
+permissions:
+  - $ref: ./org-admin.permission.yaml

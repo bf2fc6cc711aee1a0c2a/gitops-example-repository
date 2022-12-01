@@ -1,0 +1,15 @@
+$schema: red-hat/rbac/permission-v1.yml
+id: development-developer
+
+labels:
+  service: rhosr
+
+description: ""
+
+config:
+  - $schema: red-hat/rbac/rhosr/permission-config-v1.yml
+    config:
+      org_id: 123456
+      role: developer
+      instance_id:
+        - development

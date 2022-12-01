@@ -1,0 +1,14 @@
+$schema: red-hat/rbac/team-v1.yaml
+id: org-admins
+name: Organization Admins
+
+labels:
+  service: rhosr
+
+description: ""
+
+roles:
+  - $ref: ./org-admin.permission.yaml
+
+users:
+  - $ref: ./jsenko.user.yaml
